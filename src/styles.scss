@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap';
+@import 'sass/reset';
+@import 'sass/colors';
+@import 'sass/buttons';
+@import 'sass/cards';
+@import 'sass/grid';
+@import 'sass/others';
+@import 'sass/forms';
+@import 'sass/selection';
+
+@include selection;
+
+body {
+    background-color: $light;
+    font-family: $font-default;
+    color: darken($light, 70%);
+    -webkit-font-smoothing: antialiased !important;
+}
+
+.space-navbar {
+    margin-top: $navbar-height + 40px;
+    margin-bottom: 60px;
+}

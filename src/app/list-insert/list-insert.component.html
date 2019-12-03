@@ -1,0 +1,28 @@
+<div class="container space-navbar">
+    <h1>Inserir lista</h1>
+    <p>Escolha um nome para sua lista e selecione qual categoria ela irá pertencer</p>
+    <form #formInsertList="ngForm">
+        <div class="form-group">
+            <label for="name">Nome</label>
+            <input id="name" name="name" minlength="5" placeholder="Nome da lista" #name="ngModel" autofocus required
+                [(ngModel)]="list.name" />
+            <span *ngIf="name.invalid && name.touched" class="form-invalid">Campo obrigatório</span>
+        </div>
+
+        <div *ngIf="categoriesObs$ | async as categories" class="form-group">
+            <label for="category">Categoria</label>
+            <select id="category" name="category" placeholder="Selecione a categoria" [(ngModel)]="list.itemId"
+                #category="ngModel" required>
+                <option></option>
+                <option *ngFor="let category of categories" value="{{ category.id }}">{{ category.name }}</option>
+            </select>
+            <span *ngIf="category.invalid && category.touched" class="form-invalid">Campo obrigatório</span>
+        </div>
+
+    </form>
+    <div class="form-group">
+        <button type="submit" [disabled]="!formInsertList.valid" class="btn btn-primary btn-block"
+            (click)="saveList()">Inserir lista</button>
+    </div>
+
+</div>

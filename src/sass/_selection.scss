@@ -1,0 +1,13 @@
+@import './colors';
+
+@mixin selection {
+    ::-moz-selection {
+        color: #fff;
+		background: $secondary;
+	}
+      
+    ::selection {
+        color: #fff;
+		background: $secondary;
+	}
+}

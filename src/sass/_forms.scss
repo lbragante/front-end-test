@@ -1,0 +1,55 @@
+@import './colors';
+@import './others';
+
+label {
+    display: block;
+    margin-bottom: .6em;
+}
+
+input, select {
+    width: 100%;
+    display: block;
+    height: 3em;
+    border-radius: $rounded-border;
+    border: 1.6px solid darken($light, 15%);
+    padding: 15px 18px;
+    margin-bottom: .4em;
+    color: darken($light, 80%);
+    font-size: 1.2em;
+    font-family: $font-default;
+    transition: $transition-default;
+}
+
+input:focus, select:focus {
+    border: 1.6px solid $primary;
+}
+
+input.ng-touched.ng-invalid, select.ng-touched.ng-invalid {
+    border: 1.4px solid $danger;
+}
+
+input.ng-touched.ng-valid, select.ng-touched.ng-valid {
+    border: 1.4px solid $success;
+}
+
+.form-invalid {
+  color: $danger;
+}
+
+.form-group {
+    margin-top: 2em;
+    width: 100%;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: darken($light, 10%);
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: darken($light, 10%);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: darken($light, 10%);
+}

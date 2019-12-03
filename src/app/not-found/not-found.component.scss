@@ -1,0 +1,18 @@
+.illustration {
+    background-image: url('../../assets/images/404.svg'); /* undraw.co */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    max-width: 100%;
+}
+
+.container div {
+    margin: 2em 0;
+    display: block;
+    text-align: center;
+    clear: both;
+}
+
+.container div p {
+    margin-bottom: 1.6em;
+}

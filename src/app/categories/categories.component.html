@@ -1,0 +1,12 @@
+<div class="container space-navbar">
+    <h1>Categorias</h1>
+    <div *ngIf="categoriesObs$ | async as categories" class="row">
+        <div *ngFor="let category of categories" class="col-6">
+            <div class="card">
+                <div class="body">
+                    <p>{{ category.name }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
